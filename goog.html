@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+
+#txt2{
+  margin-left: 50px;
+}
+
+
+#txt1{
+  margin-left: 200px;
+}
+
+#txt4{
+  margin-left: 300px;
+}
+
+#img4{
+  margin-left: 300px;
+}
+
+.grow:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
+.rotate:hover
+{
+        -webkit-transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        transform: rotateZ(-30deg);
+}
+
+.circle:hover
+{
+        border-radius:50%;
+}
+
+h1 {
+
+
+  animation-duration: 3s;
+  animation-name: slidein;
+  text-align: center;
+}
+
+.fade
+{
+        opacity:0.5;
+}
+.fade:hover
+{
+        opacity:1;
+}
+
+p {
+  animation-duration: 7s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideinImg1 {
+  from {
+    margin-left: 100%;
+    width: 200px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 200px;
+  }
+}
+
+@keyframes slideinImg2 {
+  from {
+    margin-left: 100%;
+    width: 200px;
+  }
+
+  to {
+    margin-left: 50px;
+    width: 200px;
+  }
+}
+
+@keyframes slideinImg3 {
+  from {
+    margin-left: 100%;
+    width: 200px;
+  }
+
+  to {
+    margin-left: 200px;
+    width: 200px;
+  }
+}
+
+
+p#channel  {
+  display:inline-block;
+
+  margin-left: 50%;
+  text-align: center;
+
+}
+
+
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+
+
+
+
+p#video{
+  display:inline-block;
+
+  margin-top:20%;
+  text-align: center;
+
+}
+
+
+#img2 {
+  animation-duration: 3s;
+  animation-name: slideinImg2;
+margin-left: 50px;
+}
+
+body {
+
+background-color: green
+}
+
+#img3 {
+  animation-duration: 4s;
+  animation-name: slideinImg3;
+margin-left: 200px;
+}
+
+
+
+
+
+img {
+  animation-duration: 5s;
+  animation-name: slideinImg1;
+  width: 200px;
+}
+
+  </style>
+</head>
+
+<body>
+<h1>
+  ENDERCRAFTER111
+</h1>
+<p id="channel">
+  my channel:<a href="https://www.youtube.com/channel/UCreQgrISZ5gj6UTAqBb2XWA"> my link</a>
+</p>
+
+<p id="videos">
+
+MY VIDEOS
+
+</p>
+
+<a href="https://www.youtube.com/watch?v=4XaKIOY1MjQ"><img  class="fade" id="img1" src="Capture.PNG" alt="sorry this is not avalable" /></a>
+<p id="txt3">christmas time lapse</p>
+<br>
+
+<a href="https://www.youtube.com/watch?v=jXMUIkl4jq8"><img  class="grow" id="img2" src="wow.PNG" alt="sorry this is not avalable" /></a>
+<p id="txt2">roblox normal elavator</p>
+
+<br>
+
+
+<a href="https://www.youtube.com/channel/UCreQgrISZ5gj6UTAqBb2XWA"><img class="rotate" id="img3" src="download.jpg" alt="sorry this is not avalable" /></a>
+<p id="txt1">my channel</p>
+
+
+<a href="https://www.youtube.com/watch?v=bfu-cQ48t-Y"><img class="circle" id="img4" src="good.jpg" alt="sorry this is not avalable" /></a>
+<p id="txt4">under water</p>
+
+
+
+
+</body>
+</html>
