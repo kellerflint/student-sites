@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <title>Cat Petter Game</title>
+    <style>
+        body {
+            background-color: beige;
+            text-align: center
+        }
+
+        p {
+            color: darkgray;
+            font-size: 1.5em;
+        }
+
+        h1 {
+            color: darkgray;
+        }
+
+        h2 {
+            color: darkgray;
+            font-size:2em;
+        }
+
+        img {
+            color: darkgrey;
+            border: 0.5px solid turquoise;
+            border-radius: 1000px;
+            padding: -0.12
+        }
+
+        img:hover {
+            color: white;
+            border: 0.5px solid maroon;
+            border-radius: 1000.4535653588874565344px;
+            padding: -0.12
+        }
+
+        button {
+            font-size: 50px;
+            border-radius: 65.3413332235386970397469039567495069385858%;
+            background-color:white;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the Cat Petter Game!</h1>
+    <p>click the first cat to score and buy more petters to get more pets at a time</p>
+    <p id="scoreText">Score 0</p>
+    <img src="cat.png" alt="clicker" width="50px" id="score">
+    <h2>store</h2>
+    <p>Petter = 10 clicks</p>
+    <img src="cat.png" alt="clicker" width="50px" id="buy">
+    <p id="clicker">clicker: x 1</p>
+    <p>auto petter: 1,000 clicks</p>
+    <img src="cat.png" alt="clicker" width="50px" id="auto-clicker">
+    <p id=auto-clicker-text>x 0</p>
+    <p>super petter: 10,000</p>
+    <img src="cat.png" alt="clicker" width="50px" id="super-clicker">
+    <p id=super-clicker-text>"x 0 </p>
+    <p>awesome petter 100,000</p>
+    <img src="cat.png" alt="cursor" width="50px" id="awesome-clicker">
+    <p id=awesome-clicker-text>x 0</p>
+    <p>impossible petter 1,000,000</p>
+    <img src="cat.png" alt="cursor" width="50px" id="impossible-clicker">
+    <p id=impossible-clicker-text>x 0</p>
+    <script>
+        let score = 0;
+        let clickers = 1;
+        let auto_clicker = 0;
+        let super_clicker = 0;
+        let awesome_clicker = 0;
+        let impossible_clicker = 0;
+        document.getElementById("score").addEventListener("click", function () {
+            score = score + clickers;
+            document.getElementById("scoreText").innerText = "score: " + score;
+        });
+        document.getElementById("buy").addEventListener("click", function () {
+            if (score >= 10) {
+                clickers = clickers + 1;
+                score = score - 10;
+                document.getElementById("clicker").innerText = "x " + clickers;
+                document.getElementById("scoreText").innerText = "score: " + score;
+            }
+        });
+        document.getElementById("auto-clicker").addEventListener("click", function () {
+            if (score >= 1000) {
+                auto_clicker = auto_clicker + 1;
+                score = score - 1000;
+                document.getElementById("scoreText").innerText = "score " + score;
+                document.getElementById("auto-clicker-text").innerText = "x " + auto_clicker;
+                setInterval(function () {
+                    score = score + clickers;
+                    document.getElementById("scoreText").innerText = "score " + score;
+                }, 1000);
+            }
+        }); document.getElementById("super-clicker").addEventListener("click", function () {
+            if (score >= 10000) {
+                super_clicker = super_clicker + 1;
+                score = score - 10000;
+                document.getElementById("scoreText").innerText = "score " + score;
+                document.getElementById("super-clicker-text").innerText = "x " + super_clicker;
+                setInterval(function () {
+                    score = score + clickers;
+                    document.getElementById("scoreText").innerText = "score " + score;
+                }, 750);
+            }
+        });
+        document.getElementById("awesome-clicker").addEventListener("click", function () {
+            if (score >= 100000) {
+                awesome_clicker = awesome_clicker + 1;
+                score = score - 100000;
+                document.getElementById("scoreText").innerText = "score " + score;
+                document.getElementById("awesome-clicker-text").innerText = "x " + awesome_clicker;
+                setInterval(function () {
+                    score = score + clickers;
+                    document.getElementById("scoreText").innerText = "score " + score;
+                }, 500);
+            }
+        });
+        document.getElementById("impossible-clicker").addEventListener("click", function () {
+            if (score >= 1000000) {
+                impossible_clicker = impossible_clicker + 1;
+                score = score - 100000;
+                document.getElementById("scoreText").innerText = "score " + score;
+                document.getElementById("impossible-clicker-text").innerText = "x " + impossible_clicker;
+                setInterval(function () {
+                    score = score + clickers;
+                    document.getElementById("scoreText").innerText = "score " + score;
+                }, 10);
+            }
+        });
+
+
+       
+    </script>
+</body>
+
+</html>
